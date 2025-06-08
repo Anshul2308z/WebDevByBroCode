@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+#myBox{
+    background-color: blue;
+    width:30vw;
+    height: 10vh;
+    position:relative;
+    top: 0px;
+    left: 0px;
+
+
+}
+    </style>
+    <div id="myBox" ></div>   
+    <script>
+        
+        const mybox = document.getElementById("myBox");
+const moveamount= 10;
+let x = 0 ;
+let y = 0 ;
+
+document.addEventListener("keydown", event =>{
+    if(event.key.startsWith("Arrow")){
+        event.preventDefault(); // prevents scrollbar generation and page elongation while changing positions
+        
+        switch(event.key){
+            case "ArrowUp":
+                y-=moveamount;
+                break;
+                case "ArrowDown":
+                    y+=moveamount;
+                    break ; 
+                    case "ArrowLeft":
+                        x-=moveamount;
+                        break;
+                        case "ArrowRight":
+                            x+=moveamount;
+                        }
+                        mybox.style.top =`${y}px`;
+                        mybox.style.left =`${x}px`;
+                    }
+                })
+</script>                
+                </body>
+                </html>

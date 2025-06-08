@@ -1,0 +1,1 @@
+inport  {use obj destructuring} from '/path';

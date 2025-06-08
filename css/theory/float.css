@@ -1,0 +1,8 @@
+#img1{
+    width:40px;
+    height:40px;
+    background-color: white;
+    box-shadow: 3px 3px 5px tomato, -3px -3px 5px lightblue;   
+    float:left; 
+    margin-right: 20px;;
+}

@@ -1,0 +1,23 @@
+h1{
+    margin:0;
+}
+
+.box{
+    border:5px solid;
+    font-size:5em;
+    width:250px;
+    height:250px;
+    margin:50px;
+}
+#box1{
+    background-color: tomato;
+    margin-left:auto;
+}
+#box2{
+    background-color: lightblue;
+    margin-right:auto; 
+}
+
+/* margin: auto => center align */
+/* margin-left => touches left wall ; note that it has 50px margin */
+/* margin-right => touches right wall */

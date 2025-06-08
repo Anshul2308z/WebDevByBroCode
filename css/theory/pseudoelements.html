@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- psuedo element syntax => selector::pseudoelement-->
+     <style>
+h1::first-letter{
+    font-size:3em;
+    color:blue;
+    font-style: italic ;
+}
+p::first-line{
+    background-color: yellow;
+}
+p::selection{
+    background-color: tomato;
+    color: white;
+}
+#list li::before{
+    content:"☑️";
+}
+#apple::after{
+    content:"🍎";
+}
+#banana::after{
+    content:"🍌";
+}
+#orange::after{
+    content:"🍊";
+}
+#list li::marker{
+    content:"🥷";
+    font-size: 2em;
+}
+     </style>
+<h1>Hello</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis reprehenderit sed, facere ea corrupti libero aspernatur, explicabo perferendis est, omnis harum fugiat deserunt voluptatum voluptatibus quia! Tempora dolor quae molestias corrupti, vero officia optio assumenda doloremque. Nam enim repudiandae alias ipsum quibusdam asperiores doloribus eum voluptate reiciendis exercitationem assumenda expedita, labore qui at laboriosam saepe fugiat placeat quos, eligendi iste optio beatae itaque? Ea, corporis vel animi quaerat a nostrum facere reprehenderit itaque unde sunt dolores fuga provident, doloremque assumenda praesentium odit sit laborum repudiandae ullam quisquam voluptatem enim quasi earum numquam. Reprehenderit quia molestias ex aliquid error eum quisquam veritatis corrupti iste velit sed perferendis optio magnam officia numquam ipsum voluptate, animi, nesciunt repellendus cupiditate ad placeat ipsa dolor! Harum in, minima repellat nostrum cum architecto labore soluta quaerat maiores accusamus eos id eaque tempora corrupti aliquid perspiciatis aut numquam! Sint at ducimus ipsa dolorem culpa dolorum hic sed expedita laboriosam minus, nihil recusandae rerum! Suscipit sequi impedit quasi quae dicta quidem? Eaque blanditiis harum, dicta minima deserunt ducimus cumque error ipsum consequatur voluptates ut laborum similique illo quae ab dolores culpa? Totam quo quos laborum itaque error, possimus dicta quam mollitia illum, reprehenderit, commodi nesciunt earum odit asperiores laboriosam cum sunt esse voluptas. Nostrum distinctio sapiente soluta laborum. Ipsum, soluta, incidunt facere voluptate eos sit corrupti modi tenetur molestias odit eaque blanditiis corporis ducimus officiis libero dolore dolorem nam nobis quasi ad!</p>
+
+<ul id="list">
+    <li id="apple">apple</li>
+    <li id="banana">banana</li>
+    <li id="orange">orange</li>
+    
+
+</body>
+</html>

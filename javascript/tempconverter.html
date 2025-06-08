@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+#container{
+    text-align: center;
+    border: solid 1px black;
+    width:50%;
+    padding: 15px;
+    margin:auto;
+    background-color: #dddddd;   
+    border-radius: 10px;
+}
+h2::first-letter{
+    font-size: 1.5em;
+    font-style: italic;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:mediumpurple;
+}
+#input{
+    padding:5px;
+    border-radius: 5px;
+    border: none;
+    font-family:  Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+#submit{
+    background-color: tomato;
+    border-radius: 6px;
+    padding:3px 10px;
+}
+#submit:hover{
+    background-color: rgb(228, 69, 162);
+}
+label{
+    color:hsla(0, 0%, 0%, 0.916)
+}
+#result{
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+    
+}
+
+    </style>
+<div id="container">
+    <h2>
+Temprature<br> conversion:
+    </h2>
+
+
+ <input id="input" placeholder="input" >
+        <br><br>
+<input id="ctof" type="radio" name="convert" >
+        <label for="ctof">Celsius to fahrenheit</label>
+   <br>  
+<input id="ftoc" name="convert" type="radio">
+        <label for="ftoc">fahrenheit to Celsius</label>       
+<br><br>
+
+<input type="submit" id="submit" onclick=magic() > <br>
+<div id="result"></div>
+
+</div>
+
+    <script>
+function magic(){
+let input = document.getElementById("input").value.trim();
+if(input!=="" && !isNaN(input)){
+    input = Number(input);
+}
+else{ 
+    return alert("wrong input!"); 
+}
+
+let result = document.getElementById("result");
+let ctof = document.getElementById("ctof");
+let ftoc = document.getElementById("ftoc");
+if(ctof.checked){    
+    const a = input* 9/5 + 32;
+    result.textContent = `It is ${a.toFixed(2)} fahrenheit`;    
+}
+else if(ftoc.checked){
+    const b = (input-32)*5/9;
+    result.textContent =`It is ${b.toFixed(2)} Celsius`
+}
+else{
+    window.alert("select your convertion unit");
+}
+}
+    </script>
+</body>
+</html>
+<!-- use a.temp.toFixed(2) to convert it back -->

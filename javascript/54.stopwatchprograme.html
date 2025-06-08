@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #c6bebe;
+        }
+        h1{
+            font-size: 2rem;
+            font-family: monospace;
+            color: rgba(0, 0, 0, 0.758);
+        }
+        #container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+            border: 3px solid;
+            border-radius: 25px;
+            background-color: rgb(202, 207, 243);
+        }
+        #display{
+            font-size: 3rem;
+            font-family: monospace;
+            font-weight: bold;
+        }
+        #controls button{
+            font-size: 1.5rem;
+            margin: 5px;
+            border: none;
+            border-radius: 15px;
+            padding: 10px 20px;
+            cursor: pointer;
+            min-width: 125px;
+        }
+        #startBtn{
+        background-color: hsla(119, 83%, 49%, 0.568);
+    }
+    #startBtn:hover{
+        background-color: hsla(0, 76%, 50%, 0.925);
+        }
+    
+        #stopBtn{
+        background-color: hsla(0, 74%, 51%, 0.703);
+    }
+    #stopBtn:hover{
+        background-color: hsla(0, 74%, 51%, 0.836);
+        }
+    
+        #resetBtn{
+        background-color: hsla(59, 87%, 46%, 0.836);
+    }
+    #resetBtn:hover{
+         background-color: hsl(59, 87%, 46%);
+        }
+    
+    </style>
+
+<h1>Stop Watch</h1>
+    <div id="container">
+        <div id="display">
+            00:00:00:00
+        </div><br>
+        <div id="controls">
+            <button id="startBtn" onclick=start()>Start</button>
+            <button id="stopBtn" onclick=stop()>Stop</button>
+            <button id="resetBtn" onclick=reset()>Reset</button>
+        </div>
+    </div>
+<script> 
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="checkbox" id="checkbox">
+        <label for="checkbox" >subscribed </label><br>
+        <br>
+        <input type="submit" id="submitButton">
+
+    </form>
+    <p id="output"></p>
+    <script>
+        const checkbox = document.getElementById("checkbox");
+        const submit = document.getElementById("submitButton");
+        const output = document.getElementById("output");
+
+        submit.addEventListener('click', (event) => {
+            event.preventDefault();
+            if(checkbox.checked){
+                output.textContent = `you are subscribed`
+            }
+            else{
+                output.textContent = `subscribe`
+            }
+        })
+
+
+    </script>
+
+
+
+</body>
+</html>

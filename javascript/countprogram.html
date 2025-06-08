@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+h1{
+    text-align: center;
+    color: #000;
+}
+.buttons button{
+    display: inline-block;
+    width: 100px;
+    background-color: mediumpurple;
+    text-align: center;
+     padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.buttons {
+    text-align: center;
+}
+    </style>
+
+    <h1>Counter: <span id="countlabel">0</span></h1>
+<div class="buttons">
+    <button id="increasebtn" onclick=increaser()>increase</button> 
+    <button id="resetbtn">reset</button> <!-- using addEventListener-->
+    <button id="decreasebtn">decrease</button> <!-- using addEventListener-->
+</div>
+
+
+    <script>
+        let count = 0;
+        const countLabel = document.getElementById('countlabel');
+        const increaseBtn = document.getElementById('increasebtn');
+        const resetBtn = document.getElementById('resetbtn');
+        const decreaseBtn = document.getElementById('decreasebtn');
+
+        // increaseBtn.addEventListener('click', () => {
+        //     count++;
+        //     countLabel.textContent = count;
+        // });
+        function increaser (){
+            count ++;
+            countLabel.textContent = count ;
+        }
+        decreaseBtn.addEventListener('click', () => {
+            count--;
+            countLabel.textContent = count;
+        });
+        resetBtn.addEventListener('click', () => {
+            count = 0;
+            countLabel.textContent = count;
+        });
+    </script>
+</body>
+</html>

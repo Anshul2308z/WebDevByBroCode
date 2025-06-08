@@ -1,0 +1,10 @@
+@font-face {
+    font-family: give it a name;
+    src: url(/*provide local or remote path*/);
+}
+p{
+    font-family: 'give it a name';
+    font-size: 16px;    
+    font-weight: bold;
+    font-style: italic;
+}

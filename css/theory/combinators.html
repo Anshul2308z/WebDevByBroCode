@@ -1,0 +1,57 @@
+<!-- explains relationships between listed selectors -->
+
+     <!-- 
+CSS combinators and their meanings:
+A B   => Descendant (B inside A, at any depth)
+A > B => Child (B is a direct child of A)
+A + B => Adjacent sibling (B immediately follows A)
+A ~ B => General sibling (B is a sibling of A, appears later)
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #container{
+            border: 2px solid black;
+        }
+        #container p{
+            background-color:tomato;
+        }
+        #container > p{
+            background-color:lightblue;
+        }
+        #container ~ p{
+            background-color:lightgreen;
+        }
+        #container + p{
+            background-color:rgb(205, 205, 74);
+        }
+
+
+
+
+    </style>
+
+    <div id="container">
+        <p>this is #1</p>
+        <p>this is #2</p>
+        <div><p>this is #3</p></div>
+    </div>
+        <p>this is #4</p>
+        <p>this is #5</p>
+        
+
+
+
+
+
+
+</body>
+</html>

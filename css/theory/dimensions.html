@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<style>
+    *{
+        box-sizing: border-box; 
+        /* this will make sure that the padding and border are included in the total width and height of the element */
+    }
+    .box{
+        border:2px solid;
+        height:auto;
+        width:48%; /* 48% of the parent element's width */
+        float:right;
+        padding:25px;
+        text-align: center;
+        /* max-width: 25%; 25% of the viewport width */
+        /* min-width: 25%; 25% of the viewport width */
+    }
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    #container{
+        background-color: rgb(132, 132, 36);
+        height:100%;
+         max-height: 75%;
+    }
+</style>
+<div id="container">
+    <div class="box">
+    <h2>this is #1</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, voluptates odit quisquam minus labore officia quidem tenetur eius. Dolore debitis illo soluta, illum accusamus expedita quo cumque inventore sunt dolorum eos sequi quam ipsam deserunt odio cupiditate consectetur quasi veniam! Voluptas numquam perspiciatis assumenda quis tempora incidunt iusto, sit accusantium!</p>
+</div>
+<div class="box">
+    <h2>this is #2</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, voluptates odit quisquam minus labore officia quidem tenetur eius. Dolore debitis illo soluta, illum accusamus expedita quo cumque inventore sunt dolorum eos sequi quam ipsam deserunt odio cupiditate consectetur quasi veniam! Voluptas numquam perspiciatis assumenda quis tempora incidunt iusto, sit accusantium!</p>
+</div>
+
+</div>
+</body>
+</html>

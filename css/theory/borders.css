@@ -1,0 +1,16 @@
+h1{
+    border-style: outset;
+    border-width:2px;
+    border-color: #187e64;
+    /* shorthand */
+    border:2px solid #c59524;
+
+    border-radius:20px;
+}
+
+p{
+    border-bottom: 2px solid #ae2a84;
+    border-left: dotted 2px #6f6e7b;
+    border-right: tomato 2px outset;
+    border-top: blue 2px dashed ;
+}

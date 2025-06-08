@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p></p>
+    <script>
+const number = Math.floor(Math.random() * 100) + 1;
+
+let guess = window.prompt('Guess the number between 1 and 100');
+let count = 1;
+
+while (Number(guess) !== number) {
+    if (isNaN(Number(guess)) || guess === null || guess.trim() === "") {
+        guess = window.prompt('Please enter a valid number between 1 and 100');
+        continue;
+    }
+    if (Number(guess) < number) {
+        guess = window.prompt('Too low! Try again:');
+    } else if (Number(guess) > number) {
+        guess = window.prompt('Too high! Try again:');
+    }
+    count++;
+}
+window.alert(`Congratulations! You guessed the number ${number} in ${count} attempts.`);
+
+    </script>
+</body>
+</html>

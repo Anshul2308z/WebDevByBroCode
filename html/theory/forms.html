@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<form action="index.php" method="POST" enctype="multipart/form-data"> <!-- enctype is used to upload files -->
+    <!-- id should match the "for" attribute of the label  -->
+    <label for="username">Name:</label>
+    <input type="text" id="username" name="username" placeholder="enter your name" minlength="4" maxlength="20" required><br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" placeholder="password goes here" minlength="8" maxlength="20" required><br><br>
+
+
+    <label for="phone"> phone #: </label>
+    <input type="tel" id="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br><br>
+    <!-- unfortunately indian phone number pattern i couldn't find its +91 1234567890 -->
+
+    <label for="bday">Birthdate: </label>
+    <input type="date" id="bday" name="bday" min="1990-01-01" max="2025-05-11" required><br><br>
+
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity"  min="1" max="10"><br><br>
+
+    <label for="title">Title:</label>
+    
+        <label for="mr">Mr</label>
+        <input type="radio" id="mr" value="Mr." name="title">
+        <label for="ms">Ms</label>
+        <input type="radio" id="ms" value="Ms." name="title">
+        <label for="mbbs">MBBS</label>
+        <input type="radio" id="mbbs" value="MBBS." name="title">
+<!-- add name attribute so that you can only select one of the above -->
+
+<br>
+<br>
+    <!-- dropdown menu -->
+
+    <label for="payment">Payment:</label>
+    <select id="payment" name="payment">
+        <option value="upi">UPI</option>
+        <option value="credit">Credit Card</option>
+        <option value="debit">Debit Card</option>
+        <option value="netbanking">Net Banking</option>
+        <option value="visa">Visa</option>
+        <option value="mastercard">Mastercard</option>
+    </select>
+
+<br>
+<br>
+    <label for="subscribe">subscribe</label>
+    <input type="checkbox" id="subscribe" value="yes" name="subscribe">
+
+<br>
+<br>
+    <label for="comments">Comments:</label>
+    <textarea id="commenets" rows="4" cols="50" placeholder="write your comments here"></textarea><br><br>
+    
+
+<br>
+    <label for="file"></label>
+    <input type="file" id="file" accept=".pdf,image/png">
+
+    <br><br>
+
+
+
+
+    <input type="reset" value="Reset">
+    <input type="submit" value="Submit">
+
+</form>
+</body>
+</html>
+
