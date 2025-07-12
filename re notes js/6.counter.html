@@ -1,0 +1,55 @@
+
+<!-- 
+ 
+ // ❌ Mistake 1: Stored the number, not the element
+let display = document.getElementById("display").textContent; 
+// This is just a string, not the live element
+
+// ❌ Mistake 2: Did math but didn't update the DOM
+Number(display) += 1; 
+// Adds 1 but doesn’t update anything in the UI
+
+// ❌ Mistake 3: Assignment inside Number() — invalid
+display.textContent = Number(display.textContent) += 1; 
+// Incorrect use of += inside Number()
+
+// ❌ Mistake 4: Redundant assignment
+display.textContent = display.textContent = 0; 
+// Just use: display.textContent = 0;
+
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+    </style>
+    <div >Counter: <span id="display">0</span></div> 
+    <button id="increaseCounter" >+1</button>
+    <button id="decreaseCounter">-1</button>
+    <button id="ResetCounter">reset</button>
+    
+    <script>
+        let display = document.getElementById("display"); 
+        let inc = document.getElementById("increaseCounter"); 
+        let dec = document.getElementById("decreaseCounter"); 
+        let reset = document.getElementById("ResetCounter"); 
+
+        inc.onclick = function(){display.textContent = Number(display.textContent)+1};
+        dec.onclick = function(){display.textContent = Number(display.textContent)-1};
+        reset.onclick = function(){display.textContent = display.textContent = 0};
+        
+        
+    </script>
+</body>
+</html>
